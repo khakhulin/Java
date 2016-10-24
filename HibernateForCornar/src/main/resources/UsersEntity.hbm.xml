@@ -9,22 +9,22 @@
             <column name="USER_ID" sql-type="number(*)" precision="2147483646"/>
         </id>
         <property name="userName">
-            <column name="USER_NAME" sql-type="varchar2(40)" length="40"/>
+            <column name="USER_NAME" sql-type="varchar2(40)" length="40" not-null="true"/>
         </property>
         <property name="password">
             <column name="PASSWORD" sql-type="varchar2(30)" length="30"/>
         </property>
         <property name="firstName">
-            <column name="FIRST_NAME" sql-type="varchar2(20)" length="20" not-null="true"/>
+            <column name="FIRST_NAME" sql-type="varchar2(20)" length="20" not-null="false" default="null"/>
         </property>
         <property name="lastName">
-            <column name="LAST_NAME" sql-type="varchar2(20)" length="20" not-null="true"/>
+            <column name="LAST_NAME" sql-type="varchar2(20)" length="20" not-null="false" default="null"/>
         </property>
         <property name="personDescription">
-            <column name="PERSON_DESCRIPTION" sql-type="varchar2(120)" length="120" not-null="true"/>
+            <column name="PERSON_DESCRIPTION" sql-type="varchar2(120)" length="120" not-null="false" default="null"/>
         </property>
         <property name="personRating">
-            <column name="PERSON_RATING" sql-type="number(*)" precision="2147483646"/>
+            <column name="PERSON_RATING" sql-type="number(*)" precision="2147483646" default="0"/>
         </property>
     </class>
 </hibernate-mapping>

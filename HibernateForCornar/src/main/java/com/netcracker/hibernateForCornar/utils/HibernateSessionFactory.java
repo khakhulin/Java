@@ -16,9 +16,11 @@ public class HibernateSessionFactory {
 
     private static SessionFactory buildSessionFactory() {
         Configuration configuration = new Configuration().configure();
-        configuration.addResource("StudentEntity.hbm.xml");
+        configuration.addResource("UsersEntity.hbm.xml");
         final ServiceRegistry registry = new StandardServiceRegistryBuilder()
                 .applySettings(configuration.getProperties()).build();
+
+        System.out.println("Hibernate Java Config serviceRegistry created");
         try {
             sessionFactory = configuration.buildSessionFactory(registry);
         }
