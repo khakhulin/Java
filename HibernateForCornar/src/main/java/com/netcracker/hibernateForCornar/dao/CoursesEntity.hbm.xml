@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.netcracker.hibernateForCornar.dao.CoursesEntity" table="COURSES" schema="JAVA_PROJECT">
+        <id name="courseId">
+            <column name="COURSE_ID" sql-type="number(*)" precision="2147483646"/>
+        </id>
+        <property name="courseName">
+            <column name="COURSE_NAME" sql-type="varchar2(120)" length="120"/>
+        </property>
+        <property name="userId">
+            <column name="USER_ID" sql-type="number(*)" precision="2147483646"/>
+        </property>
+        <property name="cDescription">
+            <column name="C_DESCRIPTION" sql-type="varchar2(200)" length="200" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

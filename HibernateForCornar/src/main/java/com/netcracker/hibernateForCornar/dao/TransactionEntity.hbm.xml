@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.netcracker.hibernateForCornar.dao.TransactionEntity" table="TRANSACTION" schema="JAVA_PROJECT">
+        <composite-id mapped="true" class="com.netcracker.hibernateForCornar.dao.TransactionEntityPK">
+            <key-property name="transactionId">
+                <column name="TRANSACTION_ID" sql-type="number(*)" precision="2147483646"/>
+            </key-property>
+            <key-property name="studentId">
+                <column name="STUDENT_ID" sql-type="number(*)" precision="2147483646"/>
+            </key-property>
+        </composite-id>
+        <property name="lessonId">
+            <column name="LESSON_ID" sql-type="number(*)" precision="2147483646"/>
+        </property>
+    </class>
+</hibernate-mapping>

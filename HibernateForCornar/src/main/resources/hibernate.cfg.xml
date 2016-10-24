@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+
+    <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+    <property name="hibernate.connection.driver_class">oracle.jdbc.OracleDriver</property>
+    <property name="hibernate.connection.url">jdbc:oracle:thin:@//localhost:1521/XE</property>
+    <mapping class="com.netcracker.hibernateForCornar.dao.CoursesEntity"/>
+    <mapping resource="com/netcracker/hibernateForCornar/dao/CoursesEntity.hbm.xml"/>
+    <mapping resource="com/netcracker/hibernateForCornar/dao/LessonsEntity.hbm.xml"/>
+    <mapping class="com.netcracker.hibernateForCornar.dao.LessonsEntity"/>
+    <mapping class="com.netcracker.hibernateForCornar.dao.TransactionEntity"/>
+    <mapping resource="com/netcracker/hibernateForCornar/dao/TransactionEntity.hbm.xml"/>
+    <mapping class="com.netcracker.hibernateForCornar.dao.UsersEntity"/>
+    <mapping resource="com/netcracker/hibernateForCornar/dao/UsersEntity.hbm.xml"/>
+
+    <!-- DB schema will be updated if needed -->
+  </session-factory>
+</hibernate-configuration>
