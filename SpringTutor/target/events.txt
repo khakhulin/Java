@@ -1,0 +1,2 @@
+Event{id=0, msg='test 1', date=Mar 9, 2017 4:43:35 PM}
+Event{id=1, msg='event 2', date=Mar 9, 2017 4:43:35 PM}
